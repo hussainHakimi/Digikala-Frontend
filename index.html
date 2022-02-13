@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فروشگاه انترنیتی دیجی کالا</title>
+
+</head>
+<body style="margin: 0; background:#ccc;">
+    <style>
+        @font-face{
+            font-family: 'vazir';
+            src:url('fonts/Vazir.woff');
+        }
+        div,span,li,ul,p,a{
+            text-align: right;
+            direction: rtl;
+        }
+        a{text-decoration: none;}
+
+        .vazir{font-family: vazir;}
+        .fontsm{font-size: 10.3pt;}
+        .fontmd{font-size: 11.3pt;}
+        .fontlg{font-size: 12.3pt;}
+
+        ul{
+            margin: 0;
+        }
+        li{
+            list-style-type: none;
+            
+        }
+        #menu_top > ul{ padding: 0; position: relative; }
+        #menu_top > ul > li{float:right; height: 40px; line-height: 38px;}
+        #menu_top > ul > li > a{padding:0 10px; height: 40px; display: block; font-size: 10pt;}
+
+        .menu_down_icon{ width:15px; height: 8px; background: url('images/down.png') no-repeat; display: inline-block;}
+
+        #menu_top > ul > li > ul{ position: absolute; padding: 0; right: 0; background: #fff; width: 100%;box-shadow: 1px 3px 4px #ccc;}
+
+        #menu_top > ul > li > ul > li{ float: right;}
+
+        #menu_top > ul > li > ul > li > a{ font-size: 9pt; padding: 0 10px;}
+     </style>
+    <header style="background:#fff;">
+        <div id="header" style="width: 1200px; height:100px; margin:auto; padding-top:15px;">
+            <div id="header_right" style="width: 720px; float:right; height:100px;">
+                <div id="header_right_top" style="height: 40px;">
+                    <span style="width: 20px; height:20px; float:right; background:url(images/lock.png); display:block;"></span>
+                    <a href="/login" class="vazir fontsm" style="float: right; margin-right:10px">فروشگاه انترنیتی دیجی کالا, وارد شوید</a>
+ 
+                    <span style="width: 20px; height:20px; margin-right:25px; float:right; background:url(images/signup.png); display:block;"></span>
+                    <a href="register" class="vazir fontsm" style="margin-right: 10px;">ثبت نام کنید</a>
+
+                </div>
+                <div id="header_right_buttom" style="height: 60px;">
+                    <div id="basket_top" style="height: 40px; width:190px; float:right;">
+                        <div id="basket_top_right" style="width: 54px; height:100%; float:right; background:#38a844 url(images/basket.png) no-repeat center"></div>
+                        <div id="basket_top_left" style="width: 120px; padding-right:16px; height:100%; line-height:21px; float:right; background:#12991f">
+                            <span class="vazir fontsm" style="color:#fff;">سبد خرید</span>
+                            <span class="fontmd" style="width: 25px; height:25px; background:#eee; text-align:center; display:inline-block; line-height:25px; border-radius:100%; margin-top:7px;">0</span>
+                        </div>
+                    </div>
+                    <div id="search_top" style="width: 480px; height:40px; float:right; margin-right:20px;position:relative;">
+                        <input class="vazir" style="width:480px; padding-right:10px; height:30px;  margin-top:3px; border:1px solid #ccc;" placeholder="محصولات را میتوانید از اینجا جستجو کنید...">
+                        <span style="width: 42px; height:35px; background:#ccc url(images/search.png) no-repeat center; display:block; position:absolute;top:4px;left: -13px;"></span>
+                    </div>
+                </div>
+            </div>
+            <div id="header_left" style="width: 200px; float:left;">
+                <img src="images/logo.png" style="padding-top:25px;">
+            </div>
+            
+        </div>
+    </header>
+
+    <nav style="width: 100%; height:40px;background:#e1eaeb; box-shadow:1px 3px 4px #ccc;border-top: 1px solid #ccc;">
+        <div id="menu_top" style="width: 1200px; height:40px; margin:auto; ">
+            <ul class="vazir" style="">
+                <li class="" style=" ">
+                    <a>
+                        کالایی دیجیتال
+                        <span class="menu_down_icon"></span>
+                    </a>
+                    <!-- <ul>
+                        <li>
+                            <a> 
+                                موبایل
+                            </a>
+                        </li>
+                        <li>
+                            <a> 
+                                تبلیت و کتابخوان
+                            </a>
+                        </li>
+                        <li>
+                            <a> 
+                                لب تاب
+                            </a>
+                        </li>
+                    </ul>   -->
+                </li>
+                <li class="" style="">
+                    <a>
+                        لوازم خانگی
+                        <span class="menu_down_icon"></span>
+                    </a>
+                    <ul>
+                        <li>
+                            <a> 
+                                صوتی و تصویری
+                            </a>
+                        </li>
+                        <li>
+                            <a> 
+                                لوازم خانگی برقی
+                            </a>
+                        </li>
+                      
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+</body>
+</html>
