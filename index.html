@@ -42,7 +42,7 @@
         #menu_top > ul > li > ul > li{ float: right;}
 
         #menu_top > ul > li > ul > li > a{ font-size: 9pt; padding: 0 10px;}
-
+        #menu_top a {cursor: pointer;}
         .top_menu3_col{
             width: 24.94%;
             height: 100%;
@@ -56,7 +56,10 @@
         }
         .top_menu3_col_ul > li{
             padding-right: 35px;
-            font-size: 8pt;;
+            font-size: 8pt;
+        
+            
+            
         }
         .top_menu3_col_ul > li:first-child{
             padding-right: 20px;
@@ -65,6 +68,21 @@
 
         .submenu3{
             display: none;
+        }
+
+        .active_menu{
+            background: #fff;
+            box-shadow: 0 -1px 3px #ccc;
+        }
+        .active_menu > a{
+            color: rgb(204, 57, 57);
+        }
+
+
+
+        #main{
+            width: 1200px;
+            margin:10px auto;
         }
      </style>
     <header style="background:#fff;">
@@ -102,13 +120,13 @@
     <nav style="width: 100%; height:40px;background:#e1eaeb; box-shadow:1px 3px 4px #ccc;border-top: 1px solid #ccc;">
         <div id="menu_top" style="width: 1200px; height:40px; margin:auto; ">
             <ul class="vazir" style="">
-                <li data-time="1">
+                <li data-time="1" >
                     <a>
                         کالایی دیجیتال
                         <span class="menu_down_icon"></span>
                     </a>
                     <ul>
-                        <li>
+                        <li data-time="3">
                             <a> 
                                 موبایل
                             </a>
@@ -119,7 +137,7 @@
                                         <li>Apple</li>
                                         <li>Samsung</li>
                                     </ul>
-                                </div>
+                                </div> 
                                 <div class="top_menu3_col"></div>
                                 <div class="top_menu3_col"></div>
                                 <div class="top_menu3_col"></div>
@@ -127,12 +145,26 @@
                                 <img src="images/mobile.png" style="width: 379px; height:335px; position:absolute; left:2px; bottom:2px;">
                             </div>
                         </li>
-                        <li>
+                        <li data-time="4">
                             <a> 
                                 تبلیت و کتابخوان
                             </a>
+                            <div class="submenu3" style="width:1200px; height:300px; background:#fff;border-top:1px solid #ccc; position:absolute;right:0;">
+                                <div class="top_menu3_col">
+                                    <ul class="top_menu3_col_ul">
+                                        <li>تبلیت</li>
+                                        <li>Apple</li>
+                                        <li>Samsung</li>
+                                    </ul>
+                                </div> 
+                                <div class="top_menu3_col"></div>
+                                <div class="top_menu3_col"></div>
+                                <div class="top_menu3_col"></div>
+
+                                <img src="images/tablet-ebook-reader.png" style="width: 379px; height:335px; position:absolute; left:2px; bottom:2px;">
+                            </div>
                         </li>
-                        <li>
+                        <li data-time="5">
                             <a> 
                                 لب تاب
                             </a>
@@ -145,13 +177,26 @@
                         <span class="menu_down_icon"></span>
                     </a>
                     <ul>
-                        <li>
+                        <li data-time="6">
                             <a> 
                                 صوتی و تصویری
                             </a>
-                            
+                            <div class="submenu3" style="width:1200px; height:300px; background:#fff;border-top:1px solid #ccc; position:absolute;right:0;">
+                                <div class="top_menu3_col">
+                                    <ul class="top_menu3_col_ul">
+                                        <li>تلویزون</li>
+                                        <li>۳۲انج</li>
+                                        <li>۴۶انج</li>
+                                    </ul>
+                                </div> 
+                                <div class="top_menu3_col"></div>
+                                <div class="top_menu3_col"></div>
+                                <div class="top_menu3_col"></div>
+
+                                <img src="images/video-audio-entertainment.png" style="width: 379px; height:335px; position:absolute; left:2px; bottom:2px;">
+                            </div>
                         </li>
-                        <li>
+                        <li data-time="7">
                             <a> 
                                 لوازم خانگی برقی
                             </a>
@@ -164,6 +209,44 @@
         </div>
     </nav>
 
+
+
+    <style>
+        #digikala_tv li a{
+            position:relative;
+        }
+        #digikala_tv li a::before{
+            content: " ";
+            width: 100%;
+            height: 160px;
+            background: rgba(0, 0, 0, .3);
+            display: block;
+            border-radius: 4px;
+            position: absolute;
+        }
+    </style>
+    <div id="main">
+        <div id="banner_top">
+            <img src="images/banner.jpg" style="width: 100%; height:138px; box-shadow:0 4px 5px #eee; border-radius:4px;">
+            <div id="sidebar_right" style="width: 290px; float:right;">
+                <img src="images/Euro2016-290.52.jpg" style="width: 100%; border-radius:4px; margin:10px 0;">
+                
+                <ul id="digikala_tv" style="padding: 0;">
+                    <li>
+                        <a style="display: block; position:relative;">
+                            <img src="images/TV_100_Innovative_Products.jpg" style="width: 100%; height:160px;border-radius:4px;">
+                            <span style="width: 60px; height:60px; border-radius:50%; background:rgba(255, 255, 255, .3); text-align:center; position:absolute; top:36%; left:0; right:0; margin:auto;">
+                                <img src="images/play.png" style="margin:18px auto;">
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div id="content" style="width:890px; height:200px;float:left;">
+
+            </div>
+        </div>
+    </div>
     <script>
         var timer = {};
         $('#menu_top li').hover(function(){
@@ -172,6 +255,7 @@
             clearTimeout(timer[timerAttr]);
             timer[timerAttr] = setTimeout(function(){
                 $('> ul',tag).fadeIn(0);
+                tag.addClass('active_menu');
                 $('> .submenu3', tag).fadeIn(0);
             }, 500);
             
@@ -184,6 +268,7 @@
             clearTimeout(timer[timerAttr]);
             timer[timerAttr] = setTimeout(function(){
                 $('> ul', tag).fadeOut(0);
+                tag.removeClass('active_menu');
                 $('> .submenu3', tag).fadeOut(0);
             }, 500);
             
