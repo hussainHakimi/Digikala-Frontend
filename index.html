@@ -37,7 +37,7 @@
 
         .menu_down_icon{ width:15px; height: 8px; background: url('images/down.png') no-repeat; display: inline-block;}
 
-        #menu_top > ul > li > ul{ position: absolute; padding: 0; right: 0; background: #fff; width: 100%;box-shadow: 1px 3px 4px #ccc;}
+        #menu_top > ul > li > ul{display: none; position: absolute; padding: 0; right: 0; background: #fff; width: 100%;box-shadow: 1px 3px 4px #ccc;}
 
         #menu_top > ul > li > ul > li{ float: right;}
 
@@ -61,6 +61,10 @@
         .top_menu3_col_ul > li:first-child{
             padding-right: 20px;
             color: #14abc4;
+        }
+
+        .submenu3{
+            display: none;
         }
      </style>
     <header style="background:#fff;">
@@ -98,7 +102,7 @@
     <nav style="width: 100%; height:40px;background:#e1eaeb; box-shadow:1px 3px 4px #ccc;border-top: 1px solid #ccc;">
         <div id="menu_top" style="width: 1200px; height:40px; margin:auto; ">
             <ul class="vazir" style="">
-                <li class="" style=" ">
+                <li data-time="1">
                     <a>
                         کالایی دیجیتال
                         <span class="menu_down_icon"></span>
@@ -108,7 +112,7 @@
                             <a> 
                                 موبایل
                             </a>
-                            <div style="width:1200px; height:300px; background:#fff;border-top:1px solid #ccc; position:absolute;right:0;">
+                            <div class="submenu3" style="width:1200px; height:300px; background:#fff;border-top:1px solid #ccc; position:absolute;right:0;">
                                 <div class="top_menu3_col">
                                     <ul class="top_menu3_col_ul">
                                         <li>گوشی موبایل</li>
@@ -135,12 +139,12 @@
                         </li>
                     </ul>  
                 </li>
-                <li class="" style="">
+                <li data-time="2">
                     <a>
                         لوازم خانگی
                         <span class="menu_down_icon"></span>
                     </a>
-                    <!-- <ul>
+                    <ul>
                         <li>
                             <a> 
                                 صوتی و تصویری
@@ -154,11 +158,37 @@
                             
                         </li>
                       
-                    </ul> -->
+                    </ul>
                 </li>
             </ul>
         </div>
     </nav>
-    
+
+    <script>
+        var timer = {};
+        $('#menu_top li').hover(function(){
+            var tag = $(this);
+            var timerAttr = tag.attr('data-time');
+            clearTimeout(timer[timerAttr]);
+            timer[timerAttr] = setTimeout(function(){
+                $('> ul',tag).fadeIn(0);
+                $('> .submenu3', tag).fadeIn(0);
+            }, 500);
+            
+        },
+        function(){
+            
+            var tag = $(this);
+            var timerAttr = tag.attr('data-time');
+
+            clearTimeout(timer[timerAttr]);
+            timer[timerAttr] = setTimeout(function(){
+                $('> ul', tag).fadeOut(0);
+                $('> .submenu3', tag).fadeOut(0);
+            }, 500);
+            
+        })
+    </script>
+
 </body>
 </html>
