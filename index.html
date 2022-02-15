@@ -637,7 +637,7 @@
                     height: 310px;
                     border-radius: 5px;
                     overflow: hidden;
-                    box-shadow: 0 1px 3px rgba(0, 0, 0, .3);
+                    box-shadow: 0 1px 3px rgba(150, 147, 147, 0.3);
                     background: #fff;
                     position: relative;
                 }
@@ -667,6 +667,8 @@
                     right: 15px;
                     background: url('images/arrow_slider.png') no-repeat;
                     background-position: 0px -33px;
+                    cursor: pointer;
+                    z-index: 2;
                 }
                 #next{
                     width: 19px;
@@ -675,6 +677,8 @@
                     top: 114px;
                     left: 15px;
                     background: url('images/arrow_slider.png') no-repeat;
+                    cursor: pointer;
+                    z-index: 2;
                 }
 
             </style>
@@ -703,8 +707,83 @@
                             <img src="images/slider5.jpg">
                         </a>
                     </div>
-                    <div id="slider_navigator">
 
+                    <style>
+
+                        #slider_navigator ul{
+                            padding: 0;
+                            height: 100%;
+                        }
+                        #slider_navigator ul li{
+                            width: 20%;
+                            float: right;
+                            height: 100%;
+                            
+
+                        }
+                        #slider_navigator ul li a{
+                            display: block;
+                            width: 100%;
+                            height: 100;
+                            text-align: center;
+                            line-height: 47px;
+                            color: white;
+                            cursor: pointer;
+                        }
+
+                        #slider #slider_navigator .active > a{
+                            background: #fff;
+                            color: #1e444b;
+                            height: 100%;
+                            width: 100%;
+                            display: block;
+                            position: relative;
+                        }
+
+                        #slider #slider_navigator .active > a::after{
+                            content: " ";
+                            width: 0;
+                            height: 0;
+                            border-style: solid;
+                            border-width: 0 12.5px 13px 12.5px;
+                            border-color: transparent transparent #fff transparent;
+                            position: absolute;
+                            top:-12px;
+                            right: 0;
+                            left: 0;
+                            margin: 0 auto;
+                        }
+
+
+                    </style>
+                    <div id="slider_navigator" class="vazir fontsm">
+                        <ul>
+                            <li>
+                                <a>
+                                    محصولات کالا خواب
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    لوازم جانبی دوربین
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    سری جدید Vaio
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    کتب معنوی
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    لوازم خانگی BOSCH
+                                </a>
+                            </li>
+                        </ul>
                     </div>
 
                 </div>
@@ -712,24 +791,73 @@
 
            
         </div>
-        <button>Start Slider</button>
     </div>
     <script>
+        /*  Start of Slider */
 
         var sliderTag = $('#slider');
         var sliderItem = sliderTag.find('.item');
         var nextSlide = 1;
+        var numItem = sliderItem.length;
+        var sliderNavigators = sliderTag.find('#slider_navigator ul li');
+        var timeOut = 5000;
 
         function slider(){
+            if(nextSlide > numItem){
+                nextSlide = 1
+            }
+
+            if(nextSlide < 1){
+                nextSlide = numItem;
+            }
             sliderItem.hide();
             sliderItem.eq(nextSlide - 1).fadeIn(100);
+            sliderNavigators.removeClass('active');
+            sliderNavigators.eq(nextSlide - 1).addClass('active');
             nextSlide++;
         }
+        slider();
+        var sliderInterval = setInterval(slider, timeOut);
 
-        $('button').click(function(){
-            slider();
+        sliderTag.mouseleave(function(){
+            clearInterval(sliderInterval);
+            sliderInterval = setInterval(slider, timeOut);
         });
 
+
+        function gotoNext(){
+            
+            slider();
+        }
+
+        $('#slider #next').click(function(){
+            clearInterval(sliderInterval);
+            gotoNext();
+        });
+
+
+        function gotoPrev(){
+            nextSlide = nextSlide - 2;
+            slider();
+        }
+        $('#slider #prev').click(function(){
+            clearInterval(sliderInterval);
+            gotoPrev();
+        });
+
+        function gotoSlide(index){
+            clearInterval(sliderInterval);
+            nextSlide = index;
+            slider();
+        }
+
+        $('#slider #slider_navigator li').hover(function(){
+            var index = $(this).index();
+            gotoSlide(index+1);
+        }, function(){
+        });
+
+        /*  End of Slider */
 
         var timer = {};
         $('#menu_top li').hover(function(){
