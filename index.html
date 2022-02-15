@@ -31,18 +31,146 @@
             list-style-type: none;
             
         }
-        #menu_top > ul{ padding: 0; position: relative; }
-        #menu_top > ul > li{float:right; height: 40px; line-height: 38px;}
-        #menu_top > ul > li > a{padding:0 10px; height: 40px; display: block; font-size: 10pt;}
+        #header{
+            width: 1200px;
+            height:100px;
+            margin:auto;
+            padding-top:15px;
+        }
+        #header_right{
+            width: 720px;
+            float:right;
+            height:100px;
+        }
+        #header_right_top{
+            height: 40px;
+        }
+        #lock_icon{
+            width: 20px;
+            height:20px;
+            float:right;
+            background:url(images/lock.png);
+            display:block;
+        }
+        
+        #signup_icon{
+            width: 20px;
+            height:20px;
+            margin-right:25px;
+            float:right;
+            background:url(images/signup.png);
+            display:block;
+        }
+        #header_right_buttom{
+            height: 60px;
+        }
+        #basket_top{
+            height: 40px;
+            width:190px;
+            float:right;
+        }
+        #basket_top_right{
+            width: 54px;
+            height:100%;
+            float:right;
+            background:#38a844 url(images/basket.png) no-repeat center;
+        }
+        #basket_top_left{
+            width: 120px;
+            padding-right:16px;
+            height:100%;
+            line-height:21px;
+            float:right;
+            background:#12991f;
+        }
+        #basket_digit{
+            width: 25px;
+            height:25px;
+            background:#eee;
+            text-align:center;
+            display:inline-block;
+            line-height:25px;
+            border-radius:100%;
+            margin-top:7px;
+        }
+        #search_top{
+            width: 480px;
+            height:40px;
+            float:right;
+            margin-right:20px;
+            position:relative;
+        }
+        #search_input{
+            width:480px;
+            padding-right:10px;
+            height:30px;
+            margin-top:3px;
+            border:1px solid #ccc;
+        }
+        #search_icon{
+            width: 42px;
+            height:35px;
+            background:#ccc url('images/search.png') no-repeat center;
+            display:block;
+            position:absolute;
+            top:4px;
+            left: -13px;
+        }
+        #navbar{
+            width: 100%;
+            height:40px;
+            background:#e1eaeb;
+            box-shadow:1px 3px 4px #ccc;
+            border-top: 1px solid #ccc;
+        }
+        #menu_top{
+            width: 1200px;
+            height:40px;
+            margin:auto;
+        }
 
-        .menu_down_icon{ width:15px; height: 8px; background: url('images/down.png') no-repeat; display: inline-block;}
+        #menu_top > ul{
+            padding: 0;
+            position: relative; 
+        }
+        #menu_top > ul > li{
+            float:right;
+            height: 40px;
+            line-height: 38px;
+        }
+        #menu_top > ul > li > a{
+            padding:0 10px;
+            height: 40px;
+            display: block;
+            font-size: 10pt;
+        }
 
-        #menu_top > ul > li > ul{display: none; position: absolute; padding: 0; right: 0; background: #fff; width: 100%;box-shadow: 1px 3px 4px #ccc;}
+        .menu_down_icon{
+            width:15px;
+            height: 8px;
+            background: url('images/down.png') no-repeat;
+            display: inline-block;}
 
-        #menu_top > ul > li > ul > li{ float: right;}
+        #menu_top > ul > li > ul{
+            display: none;
+            position: absolute;
+            padding: 0;
+            right: 0;
+            background: #fff;
+            width: 100%;
+            box-shadow: 1px 3px 4px #ccc;}
 
-        #menu_top > ul > li > ul > li > a{ font-size: 9pt; padding: 0 10px;}
-        #menu_top a {cursor: pointer;}
+        #menu_top > ul > li > ul > li{
+            float: right;
+        }
+
+        #menu_top > ul > li > ul > li > a{
+            font-size: 9pt;
+            padding: 0 10px;
+        }
+        #menu_top a {
+            cursor: pointer;
+        }
         .top_menu3_col{
             width: 24.94%;
             height: 100%;
@@ -68,6 +196,20 @@
 
         .submenu3{
             display: none;
+            width:1200px;
+            height:300px;
+            background:#fff;
+            border-top:1px solid #ccc;
+            position:absolute;
+            right:0;
+        }
+
+        .img_for_submenu3{
+            width: 379px;
+            height:335px;
+            position:absolute;
+            left:2px;
+            bottom:2px;
         }
 
         .active_menu{
@@ -84,29 +226,32 @@
             width: 1200px;
             margin:10px auto;
         }
+
+
+
      </style>
     <header style="background:#fff;">
-        <div id="header" style="width: 1200px; height:100px; margin:auto; padding-top:15px;">
-            <div id="header_right" style="width: 720px; float:right; height:100px;">
-                <div id="header_right_top" style="height: 40px;">
-                    <span style="width: 20px; height:20px; float:right; background:url(images/lock.png); display:block;"></span>
+        <div id="header">
+            <div id="header_right">
+                <div id="header_right_top">
+                    <span id="lock_icon"></span>
                     <a href="/login" class="vazir fontsm" style="float: right; margin-right:10px">فروشگاه انترنیتی دیجی کالا, وارد شوید</a>
  
-                    <span style="width: 20px; height:20px; margin-right:25px; float:right; background:url(images/signup.png); display:block;"></span>
+                    <span id="signup_icon"></span>
                     <a href="register" class="vazir fontsm" style="margin-right: 10px;">ثبت نام کنید</a>
 
                 </div>
-                <div id="header_right_buttom" style="height: 60px;">
-                    <div id="basket_top" style="height: 40px; width:190px; float:right;">
-                        <div id="basket_top_right" style="width: 54px; height:100%; float:right; background:#38a844 url(images/basket.png) no-repeat center"></div>
-                        <div id="basket_top_left" style="width: 120px; padding-right:16px; height:100%; line-height:21px; float:right; background:#12991f">
+                <div id="header_right_buttom">
+                    <div id="basket_top">
+                        <div id="basket_top_right"></div>
+                        <div id="basket_top_left">
                             <span class="vazir fontsm" style="color:#fff;">سبد خرید</span>
-                            <span class="fontmd" style="width: 25px; height:25px; background:#eee; text-align:center; display:inline-block; line-height:25px; border-radius:100%; margin-top:7px;">0</span>
+                            <span class="fontmd" id="basket_digit">0</span>
                         </div>
                     </div>
-                    <div id="search_top" style="width: 480px; height:40px; float:right; margin-right:20px;position:relative;">
-                        <input class="vazir" style="width:480px; padding-right:10px; height:30px;  margin-top:3px; border:1px solid #ccc;" placeholder="محصولات را میتوانید از اینجا جستجو کنید...">
-                        <span style="width: 42px; height:35px; background:#ccc url(images/search.png) no-repeat center; display:block; position:absolute;top:4px;left: -13px;"></span>
+                    <div id="search_top">
+                        <input id="search_input" class="vazir" placeholder="محصولات را میتوانید از اینجا جستجو کنید...">
+                        <span id="search_icon"></span>
                     </div>
                 </div>
             </div>
@@ -117,9 +262,9 @@
         </div>
     </header>
 
-    <nav style="width: 100%; height:40px;background:#e1eaeb; box-shadow:1px 3px 4px #ccc;border-top: 1px solid #ccc;">
-        <div id="menu_top" style="width: 1200px; height:40px; margin:auto; ">
-            <ul class="vazir" style="">
+    <nav id="navbar">
+        <div id="menu_top">
+            <ul class="vazir">
                 <li data-time="1" >
                     <a>
                         کالایی دیجیتال
@@ -130,7 +275,7 @@
                             <a> 
                                 موبایل
                             </a>
-                            <div class="submenu3" style="width:1200px; height:300px; background:#fff;border-top:1px solid #ccc; position:absolute;right:0;">
+                            <div class="submenu3">
                                 <div class="top_menu3_col">
                                     <ul class="top_menu3_col_ul">
                                         <li>گوشی موبایل</li>
@@ -142,14 +287,14 @@
                                 <div class="top_menu3_col"></div>
                                 <div class="top_menu3_col"></div>
 
-                                <img src="images/mobile.png" style="width: 379px; height:335px; position:absolute; left:2px; bottom:2px;">
+                                <img src="images/mobile.png" class="img_for_submenu3">
                             </div>
                         </li>
                         <li data-time="4">
                             <a> 
                                 تبلیت و کتابخوان
                             </a>
-                            <div class="submenu3" style="width:1200px; height:300px; background:#fff;border-top:1px solid #ccc; position:absolute;right:0;">
+                            <div class="submenu3">
                                 <div class="top_menu3_col">
                                     <ul class="top_menu3_col_ul">
                                         <li>تبلیت</li>
@@ -161,7 +306,7 @@
                                 <div class="top_menu3_col"></div>
                                 <div class="top_menu3_col"></div>
 
-                                <img src="images/tablet-ebook-reader.png" style="width: 379px; height:335px; position:absolute; left:2px; bottom:2px;">
+                                <img src="images/tablet-ebook-reader.png" class="img_for_submenu3">
                             </div>
                         </li>
                         <li data-time="5">
@@ -181,7 +326,7 @@
                             <a> 
                                 صوتی و تصویری
                             </a>
-                            <div class="submenu3" style="width:1200px; height:300px; background:#fff;border-top:1px solid #ccc; position:absolute;right:0;">
+                            <div class="submenu3">
                                 <div class="top_menu3_col">
                                     <ul class="top_menu3_col_ul">
                                         <li>تلویزون</li>
@@ -193,7 +338,7 @@
                                 <div class="top_menu3_col"></div>
                                 <div class="top_menu3_col"></div>
 
-                                <img src="images/video-audio-entertainment.png" style="width: 379px; height:335px; position:absolute; left:2px; bottom:2px;">
+                                <img src="images/video-audio-entertainment.png" class="img_for_submenu3">
                             </div>
                         </li>
                         <li data-time="7">
@@ -212,8 +357,30 @@
 
 
     <style>
+        #banner_top > img{
+            width: 100%;
+            height:138px;
+            box-shadow:0 4px 5px #eee;
+            border-radius:4px;
+        }
+        #sidebar_right{
+            width: 290px;
+            float:right;
+        }
+        #sidebar_right > img{
+            width: 100%;
+            border-radius:4px;
+            margin:10px 0;
+        }
+        #digikala_tv{
+            padding: 0;
+        }
         #digikala_tv li a{
             position:relative;
+            display: block;
+        }
+        #digikala_tv li{
+            margin-top: 10px;
         }
         #digikala_tv li a::before{
             content: " ";
@@ -224,25 +391,245 @@
             border-radius: 4px;
             position: absolute;
         }
+        #digikala_tv li a > img{
+            width: 100%;
+             height:160px;
+             border-radius:4px;
+        }
+        #digikala_tv li .circle{
+            transition: all 1s ease;
+            width: 60px; height:60px;
+            border-radius:50%;
+            background:rgba(255, 255, 255, .3);
+            text-align:center;
+            position:absolute;
+            top:36%;
+            left:0;
+            right:0;
+            margin:auto;
+
+        }
+
+        #digikala_tv li:hover .circle{background: rgba(255, 255, 255, .4) !important;}
+        
+        #digikala_tv li .play_icon{
+            margin:18px auto;
+        }
+
+
+        #sidebar_right_ul{
+            padding: 0;
+        }
+        #sidebar_right_ul li{
+            margin-top: 10px;
+            height: 265px;
+        }
+
+        #sidebar_right_ul li img{
+            width: 100%;
+            height: 100%;
+            border-radius: 4px;
+            box-shadow: 1px 3px 4px rgba(0, 0, 0, .6);
+            overflow: hidden;
+        }
+
+
+
+        #last_news_sidebar{
+            background: #fff;
+            margin-top: 10px;
+            width: 290px;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        #last_news_sidebar h3{
+            background: #f7f9fa;
+            height: 40px;
+            padding-right: 10px;
+            line-height: 38px;
+            font-size: 10.3pt;
+            color: #1e444b;
+            margin: 0;
+
+        }
+
+        #last_news_sidebar .col_right{
+            float: right;
+        }
+        #last_news_sidebar .col_right img{
+            border-radius: 50%;
+            height: 60px;
+            width: 60px;
+        }
+
+        #last_news_sidebar .col_left{
+            float: right;
+            width: 190px;
+            padding-right: 10px;
+        }
+
+        #last_news_sidebar .col_left p{
+            margin: 0;
+            font-size: 10.3pt;
+        }
+
+        #last_news_sidebar ul li{
+            margin-top: 10px;
+            height: 100px;
+        }
+
+        #last_news_sidebar ul li a{
+            padding:8px;
+            display: block;
+            float: right;
+        }
+
+
+
+
+        #content{
+            width:890px;
+            height:200px;
+            float:left;
+        }
     </style>
     <div id="main">
         <div id="banner_top">
-            <img src="images/banner.jpg" style="width: 100%; height:138px; box-shadow:0 4px 5px #eee; border-radius:4px;">
-            <div id="sidebar_right" style="width: 290px; float:right;">
-                <img src="images/Euro2016-290.52.jpg" style="width: 100%; border-radius:4px; margin:10px 0;">
+            <img src="images/banner.jpg">
+            <div id="sidebar_right">
+                <img src="images/Euro2016-290.52.jpg">
                 
-                <ul id="digikala_tv" style="padding: 0;">
+                <ul id="digikala_tv">
                     <li>
-                        <a style="display: block; position:relative;">
-                            <img src="images/TV_100_Innovative_Products.jpg" style="width: 100%; height:160px;border-radius:4px;">
-                            <span style="width: 60px; height:60px; border-radius:50%; background:rgba(255, 255, 255, .3); text-align:center; position:absolute; top:36%; left:0; right:0; margin:auto;">
-                                <img src="images/play.png" style="margin:18px auto;">
+                        <a>
+                            <img src="images/TV_100_Innovative_Products.jpg">
+                            <span class="circle" >
+                                <img src="images/play.png" class="play_icon">
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="images/Motorola_Moto_360_1_Min_Intro.jpg">
+                            <span class="circle" >
+                                <img src="images/play.png" class="play_icon">
                             </span>
                         </a>
                     </li>
                 </ul>
+
+                <ul id="sidebar_right_ul">
+                    <li>
+                        <a>
+                            <img src="images/li1.jpg">
+                           
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="images/li2.jpg">
+                            
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="images/li3.jpg">
+                            
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="vazir" id="last_news_sidebar">
+                    <h3>تازه ترین اخبار</h3>
+
+                    <ul style="padding-right: 0;" class="vazir">
+                        <li>
+                            <a>
+                                <div class="col_right" style="float: right;">
+                                    <img src="images/SanDisk_Headquarters_Milpitas-60x60.jpg">
+                                </div>
+                                <div class="col_left" style="float: left;">
+                                    <p>کارت حافظه هایی ۲۵۶ گیگابایت سن دیسک معرفی شدند.</p>
+                                    <p style="font-size: 9pt; color:#829498">پنجشتبه ۱۰ تیر ۹۵</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <div class="col_right" style="float: right;">
+                                    <img src="images/iPhone7-headphone-3-60x60.jpg">
+                                </div>
+                                <div class="col_left" style="float: left;">
+                                    <p>کارت حافظه هایی ۲۵۶ گیگابایت سن دیسک معرفی شدند.</p>
+                                    <p style="font-size: 9pt; color:#829498">پنجشتبه ۱۰ تیر ۹۵</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <style>
+                    #brands_sidebar{
+                        margin-top: 10px;
+                    }
+                    #brands_sidebar a{
+                        display: block;
+                        height: 95px;
+                        width: 139px;
+                        background: white;
+                        float: right;
+                        margin-left: 12px;
+                        margin-bottom: 8px;
+                        border-radius: 4px;
+                        overflow: hidden;
+                        box-shadow: 0 1px 4px rgba(0, 0, 0, .3);
+                        line-height: 110px;
+                    }
+                    #brands_sidebar a img{
+                        width: 100%;
+                        
+                        margin: 0;
+                    }
+                    #brands_sidebar a:nth-child(even){
+                        float: left;
+                        margin-left: 0;
+                    }
+                </style>
+                <div id="brands_sidebar">
+                    <a>
+                        <img src="images/x.vision.png">
+                    </a>
+                    <a>
+                        <img src="images/lenovo.png" >
+                    </a>
+                    <a>
+                        <img src="images/nivea.png">
+                    </a>
+                    <a>
+                        <img src="images/adata.png" >
+                    </a>
+                    <a>
+                        <img src="images/d-link.png">
+                    </a>
+                    <a>
+                        <img src="images/oral-b.png" >
+                    </a>
+                    <a>
+                        <img src="images/panasonic.png">
+                    </a>
+                    <a>
+                        <img src="images/asus.png" >
+                    </a>
+                    <a>
+                        <img src="images/samsung-brand.jpg">
+                    </a>
+                    <a>
+                        <img src="images/lg.png" >
+                    </a>
+                    
+                </div>
             </div>
-            <div id="content" style="width:890px; height:200px;float:left;">
+            <div id="content">
 
             </div>
         </div>
