@@ -487,11 +487,6 @@
 
 
 
-        #content{
-            width:890px;
-            height:200px;
-            float:left;
-        }
     </style>
     <div id="main">
         <div id="banner_top">
@@ -629,12 +624,113 @@
                     
                 </div>
             </div>
-            <div id="content">
 
+            <style>
+                
+                #content{
+                    width:890px;
+                    height:200px;
+                    float:left;
+                    margin-top: 10px;
+                }
+                #slider{
+                    height: 310px;
+                    border-radius: 5px;
+                    overflow: hidden;
+                    box-shadow: 0 1px 3px rgba(0, 0, 0, .3);
+                    background: #fff;
+                    position: relative;
+                }
+
+                #slider_img{
+                    height: 260px;
+                }
+                #slider_navigator{
+                    height: 50px;
+                    background: rgba(0, 0, 0, .4);
+                }
+                #slider_img a{
+                    display: none;
+                }
+
+                #slider_img a img{
+                    height: 100%;
+                    width: 100%;
+                }
+
+
+                #prev{
+                    width: 19px;
+                    height: 33px;
+                    position: absolute;
+                    top: 114px;
+                    right: 15px;
+                    background: url('images/arrow_slider.png') no-repeat;
+                    background-position: 0px -33px;
+                }
+                #next{
+                    width: 19px;
+                    height: 33px;
+                    position: absolute;
+                    top: 114px;
+                    left: 15px;
+                    background: url('images/arrow_slider.png') no-repeat;
+                }
+
+            </style>
+            <div id="content">
+                <div id="slider">
+                    <span id="prev">
+
+                    </span>
+                    <span id="next">
+
+                    </span>
+                    <div id="slider_img">
+                        <a class="item">
+                            <img src="images/slider1.jpg">
+                        </a>
+                        <a class="item">
+                            <img src="images/slider2.jpg">
+                        </a>
+                        <a class="item">
+                            <img src="images/slider3.jpg">
+                        </a>
+                        <a class="item">
+                            <img src="images/slider4.jpg">
+                        </a>
+                        <a class="item">
+                            <img src="images/slider5.jpg">
+                        </a>
+                    </div>
+                    <div id="slider_navigator">
+
+                    </div>
+
+                </div>
             </div>
+
+           
         </div>
+        <button>Start Slider</button>
     </div>
     <script>
+
+        var sliderTag = $('#slider');
+        var sliderItem = sliderTag.find('.item');
+        var nextSlide = 1;
+
+        function slider(){
+            sliderItem.hide();
+            sliderItem.eq(nextSlide - 1).fadeIn(100);
+            nextSlide++;
+        }
+
+        $('button').click(function(){
+            slider();
+        });
+
+
         var timer = {};
         $('#menu_top li').hover(function(){
             var tag = $(this);
