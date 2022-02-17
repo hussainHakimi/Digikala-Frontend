@@ -6,228 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>فروشگاه انترنیتی دیجی کالا</title>
     <script src="js/jquery-3.5.1.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body style="margin: 0; background:#ccc;">
     <style>
-        @font-face{
-            font-family: 'vazir';
-            src:url('fonts/Vazir.woff');
-        }
-        div,span,li,ul,p,a{
-            text-align: right;
-            direction: rtl;
-        }
-        a{text-decoration: none;}
-
-        .vazir{font-family: vazir;}
-        .fontsm{font-size: 10.3pt;}
-        .fontmd{font-size: 11.3pt;}
-        .fontlg{font-size: 12.3pt;}
-
-        ul{
-            margin: 0;
-        }
-        li{
-            list-style-type: none;
-            
-        }
-        #header{
-            width: 1200px;
-            height:100px;
-            margin:auto;
-            padding-top:15px;
-        }
-        #header_right{
-            width: 720px;
-            float:right;
-            height:100px;
-        }
-        #header_right_top{
-            height: 40px;
-        }
-        #lock_icon{
-            width: 20px;
-            height:20px;
-            float:right;
-            background:url(images/lock.png);
-            display:block;
-        }
-        
-        #signup_icon{
-            width: 20px;
-            height:20px;
-            margin-right:25px;
-            float:right;
-            background:url(images/signup.png);
-            display:block;
-        }
-        #header_right_buttom{
-            height: 60px;
-        }
-        #basket_top{
-            height: 40px;
-            width:190px;
-            float:right;
-        }
-        #basket_top_right{
-            width: 54px;
-            height:100%;
-            float:right;
-            background:#38a844 url(images/basket.png) no-repeat center;
-        }
-        #basket_top_left{
-            width: 120px;
-            padding-right:16px;
-            height:100%;
-            line-height:21px;
-            float:right;
-            background:#12991f;
-        }
-        #basket_digit{
-            width: 25px;
-            height:25px;
-            background:#eee;
-            text-align:center;
-            display:inline-block;
-            line-height:25px;
-            border-radius:100%;
-            margin-top:7px;
-        }
-        #search_top{
-            width: 480px;
-            height:40px;
-            float:right;
-            margin-right:20px;
-            position:relative;
-        }
-        #search_input{
-            width:480px;
-            padding-right:10px;
-            height:30px;
-            margin-top:3px;
-            border:1px solid #ccc;
-        }
-        #search_icon{
-            width: 42px;
-            height:35px;
-            background:#ccc url('images/search.png') no-repeat center;
-            display:block;
-            position:absolute;
-            top:4px;
-            left: -13px;
-        }
-        #navbar{
-            width: 100%;
-            height:40px;
-            background:#e1eaeb;
-            box-shadow:1px 3px 4px #ccc;
-            border-top: 1px solid #ccc;
-        }
-        #menu_top{
-            width: 1200px;
-            height:40px;
-            margin:auto;
-        }
-
-        #menu_top > ul{
-            padding: 0;
-            position: relative; 
-        }
-        #menu_top > ul > li{
-            float:right;
-            height: 40px;
-            line-height: 38px;
-        }
-        #menu_top > ul > li > a{
-            padding:0 10px;
-            height: 40px;
-            display: block;
-            font-size: 10pt;
-        }
-
-        .menu_down_icon{
-            width:15px;
-            height: 8px;
-            background: url('images/down.png') no-repeat;
-            display: inline-block;}
-
-        #menu_top > ul > li > ul{
-            display: none;
-            position: absolute;
-            padding: 0;
-            right: 0;
-            background: #fff;
-            width: 100%;
-            box-shadow: 1px 3px 4px #ccc;}
-
-        #menu_top > ul > li > ul > li{
-            float: right;
-        }
-
-        #menu_top > ul > li > ul > li > a{
-            font-size: 9pt;
-            padding: 0 10px;
-        }
-        #menu_top a {
-            cursor: pointer;
-        }
-        .top_menu3_col{
-            width: 24.94%;
-            height: 100%;
-            float: right;
-            border-left:1px solid #ccc;
-            font-size: 10pt;
-        }
-        
-        .top_menu3_col_ul{
-            padding: 0px;
-        }
-        .top_menu3_col_ul > li{
-            padding-right: 35px;
-            font-size: 8pt;
-        
-            
-            
-        }
-        .top_menu3_col_ul > li:first-child{
-            padding-right: 20px;
-            color: #14abc4;
-        }
-
-        .submenu3{
-            display: none;
-            width:1200px;
-            height:300px;
-            background:#fff;
-            border-top:1px solid #ccc;
-            position:absolute;
-            right:0;
-        }
-
-        .img_for_submenu3{
-            width: 379px;
-            height:335px;
-            position:absolute;
-            left:2px;
-            bottom:2px;
-        }
-
-        .active_menu{
-            background: #fff;
-            box-shadow: 0 -1px 3px #ccc;
-        }
-        .active_menu > a{
-            color: rgb(204, 57, 57);
-        }
-
-
-
-        #main{
-            width: 1200px;
-            margin:10px auto;
-        }
-
-
 
      </style>
     <header style="background:#fff;">
@@ -357,133 +139,7 @@
 
 
     <style>
-        #banner_top > img{
-            width: 100%;
-            height:138px;
-            box-shadow:0 4px 5px #eee;
-            border-radius:4px;
-        }
-        #sidebar_right{
-            width: 290px;
-            float:right;
-        }
-        #sidebar_right > img{
-            width: 100%;
-            border-radius:4px;
-            margin:10px 0;
-        }
-        #digikala_tv{
-            padding: 0;
-        }
-        #digikala_tv li a{
-            position:relative;
-            display: block;
-        }
-        #digikala_tv li{
-            margin-top: 10px;
-        }
-        #digikala_tv li a::before{
-            content: " ";
-            width: 100%;
-            height: 160px;
-            background: rgba(0, 0, 0, .3);
-            display: block;
-            border-radius: 4px;
-            position: absolute;
-        }
-        #digikala_tv li a > img{
-            width: 100%;
-             height:160px;
-             border-radius:4px;
-        }
-        #digikala_tv li .circle{
-            transition: all 1s ease;
-            width: 60px; height:60px;
-            border-radius:50%;
-            background:rgba(255, 255, 255, .3);
-            text-align:center;
-            position:absolute;
-            top:36%;
-            left:0;
-            right:0;
-            margin:auto;
-
-        }
-
-        #digikala_tv li:hover .circle{background: rgba(255, 255, 255, .4) !important;}
         
-        #digikala_tv li .play_icon{
-            margin:18px auto;
-        }
-
-
-        #sidebar_right_ul{
-            padding: 0;
-        }
-        #sidebar_right_ul li{
-            margin-top: 10px;
-            height: 265px;
-        }
-
-        #sidebar_right_ul li img{
-            width: 100%;
-            height: 100%;
-            border-radius: 4px;
-            box-shadow: 1px 3px 4px rgba(0, 0, 0, .6);
-            overflow: hidden;
-        }
-
-
-
-        #last_news_sidebar{
-            background: #fff;
-            margin-top: 10px;
-            width: 290px;
-            border-radius: 4px;
-            overflow: hidden;
-        }
-        #last_news_sidebar h3{
-            background: #f7f9fa;
-            height: 40px;
-            padding-right: 10px;
-            line-height: 38px;
-            font-size: 10.3pt;
-            color: #1e444b;
-            margin: 0;
-
-        }
-
-        #last_news_sidebar .col_right{
-            float: right;
-        }
-        #last_news_sidebar .col_right img{
-            border-radius: 50%;
-            height: 60px;
-            width: 60px;
-        }
-
-        #last_news_sidebar .col_left{
-            float: right;
-            width: 190px;
-            padding-right: 10px;
-        }
-
-        #last_news_sidebar .col_left p{
-            margin: 0;
-            font-size: 10.3pt;
-        }
-
-        #last_news_sidebar ul li{
-            margin-top: 10px;
-            height: 100px;
-        }
-
-        #last_news_sidebar ul li a{
-            padding:8px;
-            display: block;
-            float: right;
-        }
-
 
 
 
@@ -564,31 +220,8 @@
                 </div>
 
                 <style>
-                    #brands_sidebar{
-                        margin-top: 10px;
-                    }
-                    #brands_sidebar a{
-                        display: block;
-                        height: 95px;
-                        width: 139px;
-                        background: white;
-                        float: right;
-                        margin-left: 12px;
-                        margin-bottom: 8px;
-                        border-radius: 4px;
-                        overflow: hidden;
-                        box-shadow: 0 1px 4px rgba(0, 0, 0, .3);
-                        line-height: 110px;
-                    }
-                    #brands_sidebar a img{
-                        width: 100%;
-                        
-                        margin: 0;
-                    }
-                    #brands_sidebar a:nth-child(even){
-                        float: left;
-                        margin-left: 0;
-                    }
+                    
+
                 </style>
                 <div id="brands_sidebar">
                     <a>
@@ -627,59 +260,6 @@
 
             <style>
                 
-                #content{
-                    width:890px;
-                    height:200px;
-                    float:left;
-                    margin-top: 10px;
-                }
-                #slider{
-                    height: 310px;
-                    border-radius: 5px;
-                    overflow: hidden;
-                    box-shadow: 0 1px 3px rgba(150, 147, 147, 0.3);
-                    background: #fff;
-                    position: relative;
-                }
-
-                #slider_img{
-                    height: 260px;
-                }
-                #slider_navigator{
-                    height: 50px;
-                    background: rgba(0, 0, 0, .4);
-                }
-                #slider_img a{
-                    display: none;
-                }
-
-                #slider_img a img{
-                    height: 100%;
-                    width: 100%;
-                }
-
-
-                #prev{
-                    width: 19px;
-                    height: 33px;
-                    position: absolute;
-                    top: 114px;
-                    right: 15px;
-                    background: url('images/arrow_slider.png') no-repeat;
-                    background-position: 0px -33px;
-                    cursor: pointer;
-                    z-index: 2;
-                }
-                #next{
-                    width: 19px;
-                    height: 33px;
-                    position: absolute;
-                    top: 114px;
-                    left: 15px;
-                    background: url('images/arrow_slider.png') no-repeat;
-                    cursor: pointer;
-                    z-index: 2;
-                }
 
             </style>
             <div id="content">
@@ -709,50 +289,6 @@
                     </div>
 
                     <style>
-
-                        #slider_navigator ul{
-                            padding: 0;
-                            height: 100%;
-                        }
-                        #slider_navigator ul li{
-                            width: 20%;
-                            float: right;
-                            height: 100%;
-                            
-
-                        }
-                        #slider_navigator ul li a{
-                            display: block;
-                            width: 100%;
-                            height: 100;
-                            text-align: center;
-                            line-height: 47px;
-                            color: white;
-                            cursor: pointer;
-                        }
-
-                        #slider #slider_navigator .active > a{
-                            background: #fff;
-                            color: #1e444b;
-                            height: 100%;
-                            width: 100%;
-                            display: block;
-                            position: relative;
-                        }
-
-                        #slider #slider_navigator .active > a::after{
-                            content: " ";
-                            width: 0;
-                            height: 0;
-                            border-style: solid;
-                            border-width: 0 12.5px 13px 12.5px;
-                            border-color: transparent transparent #fff transparent;
-                            position: absolute;
-                            top:-12px;
-                            right: 0;
-                            left: 0;
-                            margin: 0 auto;
-                        }
 
 
                     </style>
@@ -785,13 +321,100 @@
                             </li>
                         </ul>
                     </div>
+                </div>
+
+                    
+                <style>
+                    #services_feature{
+                    width: 890px;
+                    height: 76px;
+                    margin: 10px 0;
+                    background: #fff;
+                    box-shadow: 0 5px 3px rgba(0, 0, 0, .3);
+                    border-radius: 4px;
+                    overflow: hidden;
+                    }
+
+                    #services_feature ul{
+                        padding: 0;
+                        height: 100%;
+                    }
+                    #services_feature ul li{
+                        width: 20%;
+                        height: 100%;
+                        float: right;
+                    }
+                    #services_feature ul li a{
+                        display: block;
+                        height: 100%;
+                        font-family: vazir;
+                        font-size: 10pt;
+                        line-height: 72px;
+                        padding: 0 10px;
+                    }
+
+                    #services_feature ul li a i{
+                        width: 25px;
+                        height: 25px;
+                        display: inline-block;
+                        background: url('images/slices.png') no-repeat;
+                        float: right;
+                        margin-top: 22px;
+                        margin-left: 8px;
+                    
+                    }
+                    
+                    
+                </style>
+
+                    <div id="services_feature">
+                        <ul>
+                            <li>
+                                <a>
+                                    <i style="background-position: -209px -473px;">
+
+                                    </i>
+                                    7 روز ضمانت بازگشت
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <i style="background-position: -263px -473px;">
+
+                                    </i>
+                                    پرداخت در محل
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <i style="background-position: -158px -473px;">
+
+                                    </i>
+                            ضمانت اصل بودن کالا
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <i style="background-position: -315px -473px; width:36px">
+
+                                    </i>
+                                    تحویل اکسپرس
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <i style="background-position: -103px -473px;">
+
+                                    </i>
+                                    تضمین بهترین کالا
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
 
                 </div>
             </div>
-
-           
-        </div>
-    </div>
     <script>
         /*  Start of Slider */
 
