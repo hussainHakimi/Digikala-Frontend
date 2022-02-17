@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>فروشگاه انترنیتی دیجی کالا</title>
     <script src="js/jquery-3.5.1.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <script src="js/jquery.flipTimer.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/flipTimer.css">
 </head>
 <body style="margin: 0; background:#ccc;">
     <style>
@@ -325,44 +327,6 @@
 
                     
                 <style>
-                    #services_feature{
-                    width: 890px;
-                    height: 76px;
-                    margin: 10px 0;
-                    background: #fff;
-                    box-shadow: 0 5px 3px rgba(0, 0, 0, .3);
-                    border-radius: 4px;
-                    overflow: hidden;
-                    }
-
-                    #services_feature ul{
-                        padding: 0;
-                        height: 100%;
-                    }
-                    #services_feature ul li{
-                        width: 20%;
-                        height: 100%;
-                        float: right;
-                    }
-                    #services_feature ul li a{
-                        display: block;
-                        height: 100%;
-                        font-family: vazir;
-                        font-size: 10pt;
-                        line-height: 72px;
-                        padding: 0 10px;
-                    }
-
-                    #services_feature ul li a i{
-                        width: 25px;
-                        height: 25px;
-                        display: inline-block;
-                        background: url('images/slices.png') no-repeat;
-                        float: right;
-                        margin-top: 22px;
-                        margin-left: 8px;
-                    
-                    }
                     
                     
                 </style>
@@ -412,11 +376,329 @@
                         </ul>
                     </div>
 
+                    <style>
+                        #slider2{
+                            width: 890px;
+                            height:305px;
+                            background:#fff;
+                            border-radius: 4px;
+                            overflow: hidden;
+                            box-shadow: 0 5px 3px rgba(0, 0, 0, .3);
+                            margin: 10px 0;
+                            position: relative;
+                        }
+
+                        #slider2_content{
+                            width: 705px;
+                            height: 100%;
+                            float: right;
+                            background: url('images/slider2_bg.jpg') no-repeat;
+                        }
+                        #slider2_navigator{
+                            width: 184px;
+                            height: 100%;
+                            float: left;
+                            border-right: 1px solid #ccc;
+                            background: #eee;
+                            
+                        }
+                        #slider2_navigator ul{
+                            padding: 0;
+                            width: 100%;
+                            height: 100%;
+                        }
+                        #slider2_navigator ul li{
+                            width: 100%;
+                            height: 12.5%;
+                        }
+                        #slider2_navigator ul li a{
+                            display: block;
+                            width: 100%;
+                            height: 100%;
+                            text-align: center;
+                            line-height: 36px;
+                            font-size: 9pt;
+                            cursor: pointer;
+                        }
+
+
+
+                        #slider2_content a{
+                            display: block;
+                            height: 100%;
+                        }
+                        .slider2_content_right{
+                            width: 57%;
+                            height: 100%;
+                            float: right;
+                        }
+                        .slider2_content_left{
+                            width: 43%;
+                            height: 100%;
+                            float: left;
+                        }
+
+                        .slider2_content_left p{
+                            font-size: 13pt;
+                            text-align: center;
+                            font-weight: bold;
+                        }
+                        .slider2_content_left img{
+                            width: 220px;
+                            margin-right: 35px;
+                        }
+
+                        .slider2_content_right .title{
+                            color: red;
+                            font-size: 12pt;
+                            margin: 29px 28px 4px 0;   
+                        }
+
+                        .slider2_content_right .price_info{
+                            width: 230px;
+                            height: 35px;
+                            margin-right: 30px;
+                        }
+                        .slider2_content_right .price_info p{
+                            float: right;
+                            width: 100%;
+                            margin: 0;
+                            font-size: 8pt;
+                        }
+                        .slider2_content_right .price_info_old{
+                            width: 75px;
+                            height: 100%;
+                            float: right;
+                            background: #787373;
+                            position: relative;
+                            color: #fff;
+                            text-align: center;
+                            font-size: 20pt;
+                            line-height: 35px;
+                        }
+
+                        
+
+                        .slider2_content_right .price_info_old::after{
+                            content: " ";
+                            width: 0;
+                            height: 0;
+                            border-style: solid;
+                            border-width: 8px 12px 8px 0;
+                            border-color: transparent #787373 transparent transparent;
+                            position: absolute;
+                            left:-10px;
+                            top: 9px;
+                            z-index: 2;
+                        }
+
+                        .slider2_content_right .price_info_old::before{
+                            content: " ";
+                            position: absolute;
+                            right: 1px;
+                            top: 16px;
+                            border: 1px solid #000;
+                            width: 88%;
+                            transform: rotate(-25deg);
+                        }
+                        .slider2_content_right .price_info_new{
+                            width: 152px;
+                            height: 100%;
+                            float: left;
+                            background: red;
+                            position: relative;
+                            color: #fff;
+                            text-align: center;
+                            font-size: 20pt;
+                            line-height: 35px;
+                        }
+                        .slider2_content_right .price_info_new::before{ 
+                            content: " ";
+                            width: 0;
+                            height: 0;
+                            border-style: solid;
+                            border-width: 8px 12px 8px 0;
+                            border-color: transparent #fff transparent transparent;
+                            position: absolute;
+                            right: 0;
+                            top: 9px;
+                        }
+
+
+                        /* Start FlipTimer   */
+                        .flipTimer{
+                            direction: lrt !important;
+                            transform: scale(.3);
+                            position: absolute;
+                            top:200px;
+                            right: -145px;
+                        }
+                        .flipTimer div{
+                            direction: ltr !important;
+                        }
+
+                        /* End FlipTimer   */
+
+                        .slider2_finished{
+                            width: 705px;
+                            height: 100%;
+                            position: absolute;
+                            right: 0;
+                            top: 0;
+                            background: rgba(0, 0, 0, .2);
+                            color: red;
+                            font-size: 35pt;
+                            text-align: center;
+                            line-height: 290px;
+                            font-weight: bolder;
+                            display: none;
+                            z-index: 2;
+                        }
+
+                        #slider2_navigator .active{
+                            background: rgb(243, 42, 42);
+                            color: white;
+                            position: relative;
+                        }
+
+                        #slider2_navigator .active::after{
+                            content: " ";
+                            width: 0;
+                            height: 0;
+                            border-style: solid;
+                            border-width: 19px 0 19px 17px;
+                            border-color: transparent transparent transparent rgb(243, 42, 42);
+                            position: absolute;
+                            top: 0;
+                            left: 184px;
+                        }
+
+
+                    </style>
+                    <div id="slider2" class="vazir">
+                        <div class="flipTimer">
+                            <!-- <div class="days"></div> -->
+                            
+                          
+                            <div class="seconds"></div>
+                            <div class="minutes"></div>
+                            <div class="hours"></div>
+                        </div>
+
+                        <div class="slider2_finished">
+                            تخفیف تمام شد!
+                        </div>
+
+                        <div id="slider2_content">
+                            <a class="item">
+                                <div class="slider2_content_right">
+                                    <p class="title">
+                                        جشنواره ماه نو
+                                    </p>
+                                    <div class="price_info">
+                                        <div class="price_info_old">
+                                            25
+                                        </div>
+                                        <div class="price_info_new">
+                                            18.5
+                                            <span style="font-size: 10pt;">
+                                                هزار تومان
+                                            </span>                                         </div>
+                                        <p style="margin-top: 30px;">
+                                            توان : ۲ و نیم وات
+                                        </p>
+                                        <p>
+                                            مقاوم در برابر ضربه
+                                        </p>
+
+                                    </div>
+                                </div>
+                                <div class="slider2_content_left">
+                                    <p>بخارپز فلر</p>
+                                    <img src="images/slider2_item1.jpg">
+                                </div>
+                            </a>
+                            <a class="item">
+                                <div class="slider2_content_right">
+                                    <p class="title">
+                                        خمیر دندان
+                                    </p>
+                                    <div class="price_info">
+                                        <div class="price_info_old">
+                                            10
+                                        </div>
+                                        <div class="price_info_new">
+                                            7.5
+                                            <span style="font-size: 10pt;">
+                                                هزار تومان
+                                            </span>                                         </div>
+                                        <p style="margin-top: 30px;">
+                                            خمیر دندان
+                                        </p>
+                                        <p>
+                                            برای دندان هایی حساس
+                                        </p>
+
+                                    </div>
+                                </div>
+                                <div class="slider2_content_left">
+                                    <p> خمیر دندان</p>
+                                    <img src="images/slider2_2.jpg">
+                                </div>
+                            </a>
+
+                        </div>
+                        <div id="slider2_navigator">
+                            <ul>
+                                <li>
+                                    <a>
+                                بخارپز فلر
+                                    </a>
+                                </li>
+                                <li>
+                                    <a>
+                                بخاری هایی ترکی
+                                    </a>
+                                </li>
+                                <li>
+                                    <a>
+                                خمیر دندان
+                                    </a>
+                                </li>
+                                <li>
+                                    <a>
+                                موبایل هایی سامسونگ
+                                    </a>
+                                </li>
+                                <li>
+                                    <a>
+                                کمپیوتر هایی لپتاب
+                                    </a>
+                                </li>
+                                <li>
+                                    <a>
+                                کمپیوتر هایی دیسکتاپ
+                                    </a>
+                                </li>
+                                <li>
+                                    <a>
+                                وسایل ورزشی
+                                    </a>
+                                </li>
+                                <li>
+                                    <a>
+                                ماشین کالا شویی
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
 
                 </div>
             </div>
     <script>
-        /*  Start of Slider */
+        /*  Start of main(first) Slider */
 
         var sliderTag = $('#slider');
         var sliderItem = sliderTag.find('.item');
@@ -480,7 +762,52 @@
         }, function(){
         });
 
-        /*  End of Slider */
+        /*  End of main Slider */
+
+        //  Start of Slider2 
+
+        var sliderTag2 = $('#slider2');
+        var sliderItem2 = sliderTag2.find('.item');
+        var nextSlide2 = 1;
+        var numItem2 = sliderItem2.length;
+        var sliderNavigators2 = sliderTag2.find('#slider2_navigator ul li');
+        var timeOut2 = 5000;
+
+        function slider2(){
+            if(nextSlide2 > numItem2){
+                nextSlide2 = 1
+            }
+
+            if(nextSlide2 < 1){
+                nextSlide2 = numItem2;
+            }
+            sliderItem2.fadeOut(0);
+            sliderItem2.eq(nextSlide2 - 1).fadeIn(100);
+            sliderNavigators2.removeClass('active');
+            sliderNavigators2.eq(nextSlide2 - 1).addClass('active');
+            nextSlide2++;
+        }
+        slider2();
+        var sliderInterval2 = setInterval(slider2, timeOut2);
+
+        sliderTag2.mouseleave(function(){
+            clearInterval(sliderInterval2);
+            sliderInterval2 = setInterval(slider2, timeOut2);
+        });
+
+
+        function gotoSlide2(index){
+            clearInterval(sliderInterval2);
+            nextSlide2 = index;
+            slider2();
+        }
+
+        $('#slider2 #slider2_navigator li').click(function(){
+            var index = $(this).index();
+            gotoSlide2(index+1);
+        });
+
+        // End of Slider2
 
         var timer = {};
         $('#menu_top li').hover(function(){
@@ -507,6 +834,25 @@
             }, 500);
             
         })
+
+        /* The Fliptimer start*/
+
+        $('.flipTimer').flipTimer({
+            direction:'down',
+           //days : true,
+            date: 'February 17,2022 20:59:00',
+            
+            callback:function(){
+                $('.slider2_content_right').css('opacity', .4);
+                $('.slider2_content_left').css('opacity', .4);
+                $('.slider2_finished').fadeIn(200);
+            }
+        });
+
+        // The end of Fliptimer
+
+
+
     </script>
 
 </body>

@@ -1,6 +1,9 @@
     @font-face{
         font-family: 'vazir';
-        src:url('fonts/Vazir.woff');
+        src:url('../fonts/Vazir.woff');
+    }
+    body{
+        font-family: vazir;
     }
     div,span,li,ul,p,a{
         text-align: right;
@@ -38,7 +41,7 @@
         width: 20px;
         height:20px;
         float:right;
-        background:url(images/lock.png);
+        background:url(../images/lock.png);
         display:block;
     }
 
@@ -47,7 +50,7 @@
         height:20px;
         margin-right:25px;
         float:right;
-        background:url(images/signup.png);
+        background:url(../images/signup.png);
         display:block;
     }
     #header_right_buttom{
@@ -62,7 +65,7 @@
         width: 54px;
         height:100%;
         float:right;
-        background:#38a844 url(images/basket.png) no-repeat center;
+        background:#38a844 url(../images/basket.png) no-repeat center;
     }
     #basket_top_left{
         width: 120px;
@@ -99,7 +102,7 @@
     #search_icon{
         width: 42px;
         height:35px;
-        background:#ccc url('images/search.png') no-repeat center;
+        background:#ccc url('../images/search.png') no-repeat center;
         display:block;
         position:absolute;
         top:4px;
@@ -137,7 +140,7 @@
     .menu_down_icon{
         width:15px;
         height: 8px;
-        background: url('images/down.png') no-repeat;
+        background: url('../images/down.png') no-repeat;
         display: inline-block;}
 
     #menu_top > ul > li > ul{
@@ -422,7 +425,7 @@
         position: absolute;
         top: 114px;
         right: 15px;
-        background: url('images/arrow_slider.png') no-repeat;
+        background: url('../images/arrow_slider.png') no-repeat;
         background-position: 0px -33px;
         cursor: pointer;
         z-index: 2;
@@ -433,7 +436,7 @@
         position: absolute;
         top: 114px;
         left: 15px;
-        background: url('images/arrow_slider.png') no-repeat;
+        background: url('../images/arrow_slider.png') no-repeat;
         cursor: pointer;
         z-index: 2;
     }
@@ -484,3 +487,48 @@
 
 
                 /*  Slider end */
+                /* Services Feature Start */
+
+                #services_feature{
+                    width: 890px;
+                    height: 76px;
+                    margin: 10px 0;
+                    background: #fff;
+                    box-shadow: 0 5px 3px rgba(0, 0, 0, .3);
+                    border-radius: 4px;
+                    overflow: hidden;
+                    }
+
+                    #services_feature ul{
+                        padding: 0;
+                        height: 100%;
+                    }
+                    #services_feature ul li{
+                        width: 20%;
+                        height: 100%;
+                        float: right;
+                    }
+                    #services_feature ul li a{
+                        display: block;
+                        height: 100%;
+                        font-family: vazir;
+                        font-size: 10pt;
+                        line-height: 72px;
+                        padding: 0 10px;
+                    }
+
+                    #services_feature ul li a i{
+                        width: 25px;
+                        height: 25px;
+                        display: inline-block;
+                        background: url('../images/slices.png') no-repeat;
+                        float: right;
+                        margin-top: 22px;
+                        margin-left: 8px;
+                    
+                    }
+                    
+
+                    /* Services Feature End */
+
+
