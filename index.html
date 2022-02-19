@@ -377,201 +377,7 @@
                     </div>
 
                     <style>
-                        #slider2{
-                            width: 890px;
-                            height:305px;
-                            background:#fff;
-                            border-radius: 4px;
-                            overflow: hidden;
-                            box-shadow: 0 5px 3px rgba(0, 0, 0, .3);
-                            margin: 10px 0;
-                            position: relative;
-                        }
-
-                        #slider2_content{
-                            width: 705px;
-                            height: 100%;
-                            float: right;
-                            background: url('images/slider2_bg.jpg') no-repeat;
-                        }
-                        #slider2_navigator{
-                            width: 184px;
-                            height: 100%;
-                            float: left;
-                            border-right: 1px solid #ccc;
-                            background: #eee;
-                            
-                        }
-                        #slider2_navigator ul{
-                            padding: 0;
-                            width: 100%;
-                            height: 100%;
-                        }
-                        #slider2_navigator ul li{
-                            width: 100%;
-                            height: 12.5%;
-                        }
-                        #slider2_navigator ul li a{
-                            display: block;
-                            width: 100%;
-                            height: 100%;
-                            text-align: center;
-                            line-height: 36px;
-                            font-size: 9pt;
-                            cursor: pointer;
-                        }
-
-
-
-                        #slider2_content a{
-                            display: block;
-                            height: 100%;
-                        }
-                        .slider2_content_right{
-                            width: 57%;
-                            height: 100%;
-                            float: right;
-                        }
-                        .slider2_content_left{
-                            width: 43%;
-                            height: 100%;
-                            float: left;
-                        }
-
-                        .slider2_content_left p{
-                            font-size: 13pt;
-                            text-align: center;
-                            font-weight: bold;
-                        }
-                        .slider2_content_left img{
-                            width: 220px;
-                            margin-right: 35px;
-                        }
-
-                        .slider2_content_right .title{
-                            color: red;
-                            font-size: 12pt;
-                            margin: 29px 28px 4px 0;   
-                        }
-
-                        .slider2_content_right .price_info{
-                            width: 230px;
-                            height: 35px;
-                            margin-right: 30px;
-                        }
-                        .slider2_content_right .price_info p{
-                            float: right;
-                            width: 100%;
-                            margin: 0;
-                            font-size: 8pt;
-                        }
-                        .slider2_content_right .price_info_old{
-                            width: 75px;
-                            height: 100%;
-                            float: right;
-                            background: #787373;
-                            position: relative;
-                            color: #fff;
-                            text-align: center;
-                            font-size: 20pt;
-                            line-height: 35px;
-                        }
-
-                        
-
-                        .slider2_content_right .price_info_old::after{
-                            content: " ";
-                            width: 0;
-                            height: 0;
-                            border-style: solid;
-                            border-width: 8px 12px 8px 0;
-                            border-color: transparent #787373 transparent transparent;
-                            position: absolute;
-                            left:-10px;
-                            top: 9px;
-                            z-index: 2;
-                        }
-
-                        .slider2_content_right .price_info_old::before{
-                            content: " ";
-                            position: absolute;
-                            right: 1px;
-                            top: 16px;
-                            border: 1px solid #000;
-                            width: 88%;
-                            transform: rotate(-25deg);
-                        }
-                        .slider2_content_right .price_info_new{
-                            width: 152px;
-                            height: 100%;
-                            float: left;
-                            background: red;
-                            position: relative;
-                            color: #fff;
-                            text-align: center;
-                            font-size: 20pt;
-                            line-height: 35px;
-                        }
-                        .slider2_content_right .price_info_new::before{ 
-                            content: " ";
-                            width: 0;
-                            height: 0;
-                            border-style: solid;
-                            border-width: 8px 12px 8px 0;
-                            border-color: transparent #fff transparent transparent;
-                            position: absolute;
-                            right: 0;
-                            top: 9px;
-                        }
-
-
-                        /* Start FlipTimer   */
-                        .flipTimer{
-                            direction: lrt !important;
-                            transform: scale(.3);
-                            position: absolute;
-                            top:200px;
-                            right: -145px;
-                        }
-                        .flipTimer div{
-                            direction: ltr !important;
-                        }
-
-                        /* End FlipTimer   */
-
-                        .slider2_finished{
-                            width: 705px;
-                            height: 100%;
-                            position: absolute;
-                            right: 0;
-                            top: 0;
-                            background: rgba(0, 0, 0, .2);
-                            color: red;
-                            font-size: 35pt;
-                            text-align: center;
-                            line-height: 290px;
-                            font-weight: bolder;
-                            display: none;
-                            z-index: 2;
-                        }
-
-                        #slider2_navigator .active{
-                            background: rgb(243, 42, 42);
-                            color: white;
-                            position: relative;
-                        }
-
-                        #slider2_navigator .active::after{
-                            content: " ";
-                            width: 0;
-                            height: 0;
-                            border-style: solid;
-                            border-width: 19px 0 19px 17px;
-                            border-color: transparent transparent transparent rgb(243, 42, 42);
-                            position: absolute;
-                            top: 0;
-                            left: 184px;
-                        }
+                       
 
 
                     </style>
@@ -695,9 +501,220 @@
                     </div>
 
 
+                    <style>
+                        .sliderScroll{
+                            width: 890px;
+                            height: 310px;
+                            box-shadow: 0 1px 2px rgba(0, 0, 0, .19);
+                            background: #fff;
+                            border-radius: 4px;
+                            overflow: hidden;
+                            margin-top: 10px;
+                        }
+                        .sliderScroll h3{
+                            background: #f7f9fa;
+                            margin: 0;
+                            height: 35px;
+                            padding-right: 10px;
+                            padding-top: 7px;
+                            font-size: 9pt;
+                            font-weight: normal;
+                        }
+                        .sliderScroll_content{
+                            height: 270px;
+                        }
+                        .sliderScroll_prev,.sliderScroll_next{
+                            height: 100%;
+                            width: 55px;
+                            float: right;
+                            
+                        }
+                        .prev,.next{
+                            width: 15px;
+                            height: 25px;
+                            display: inline-block;
+                            background: url('images/slices.png');
+                            position: relative;
+                            right: 16px;
+                            top: 108px;
+                            cursor: pointer;
+                        }
+
+                        .sliderScroll_main{
+                            height: 100%;
+                            width: 780px;
+                            float: right;
+                            overflow: hidden;
+                        }
+
+                        .sliderScroll_main ul{
+                            padding: 0;
+                            height: 100%;
+                            
+                        }
+                        .sliderScroll_main ul li{
+                            width: 195px;
+                            height: 100%;
+                            float: right;
+                        }
+                        .sliderScroll_main ul li a{
+                            display: block;
+                            height: 100%;
+                            text-align: center;
+                        }
+
+                        .sliderScroll_main ul li a p{
+                            text-align: center;
+                            margin-top: 2px;
+                            margin-bottom: 2px;
+                        }
+
+                        .price{
+                            color: rgb(52, 134, 52);
+                        }
+
+                        
+
+
+                    </style>
+                    <div class="sliderScroll">
+                        <h3>
+                            فقط در دیجی کالا
+                        </h3>
+                        <div class="sliderScroll_content">
+                            <div class="sliderScroll_prev">
+                                <span class="prev" style="background-position: -852px -687px;"></span>
+                            </div>
+                            <div class="sliderScroll_main">
+                                <ul>
+                                    <li>
+                                        <a>
+                                            <img src="images/sliderscroll_1.jpg">
+                                            <img src="images/exclusive-blue.png">
+                                            <p class="fontsm"> لپتاب سونی</p>
+                                            <p class="price">24000</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a>
+                                            <img src="images/scrollslider_2.jpg">
+                                            <img src="images/exclusive-blue.png">
+                                            <p class="fontsm"> لپتاب سونی</p>
+                                            <p class="price">24000</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a>
+                                            <img src="images/scrollslider_3.jpg">
+                                            <img src="images/exclusive-blue.png">
+                                            <p class="fontsm"> لپتاب سونی</p>
+                                            <p class="price">24000</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a>
+                                            <img src="images/scrollslider_4.jpg">
+                                            <img src="images/exclusive-blue.png">
+                                            <p class="fontsm"> لپتاب سونی</p>
+                                            <p class="price">24000</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a>
+                                            <img src="images/scrollslider_5.jpg">
+                                            <img src="images/exclusive-blue.png">
+                                            <p class="fontsm"> لپتاب سونی</p>
+                                            <p class="price">24000</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a>
+                                            <img src="images/sliderscroll_1.jpg">
+                                            <img src="images/exclusive-blue.png">
+                                            <p class="fontsm"> لپتاب سونی</p>
+                                            <p class="price">24000</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a>
+                                            <img src="images/scrollslider_2.jpg">
+                                            <img src="images/exclusive-blue.png">
+                                            <p class="fontsm"> لپتاب سونی</p>
+                                            <p class="price">24000</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a>
+                                            <img src="images/sliderscroll_1.jpg">
+                                            <img src="images/exclusive-blue.png">
+                                            <p class="fontsm"> لپتاب سونی</p>
+                                            <p class="price">24000</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a>
+                                            <img src="images/scrollslider_2.jpg">
+                                            <img src="images/exclusive-blue.png">
+                                            <p class="fontsm"> لپتاب سونی</p>
+                                            <p class="price">24000</p>
+                                        </a>
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+                            <div class="sliderScroll_next">
+                                <span class="next" style="background-position: -812px -687px;"></span>
+                            </div>
+                        </div>
+                    </div>
+
+
                 </div>
             </div>
     <script>
+        // Start of SliderScroll
+        var sliderScrollTag = $('.sliderScroll');
+        var sliderScrollUl = sliderScrollTag.find('.sliderScroll_main ul');
+        var sliderScrollItems = sliderScrollUl.find('li');
+        var sliderScrollItemsNumbers = sliderScrollItems.length; // number of li
+        var sliderScrollNumbers =Math.ceil( sliderScrollItemsNumbers / 4);  // number of slides(every four li)
+        var maxNegativeMargin = -(sliderScrollNumbers-1)*780;
+
+        sliderScrollUl.css('width', sliderScrollItemsNumbers * 195 );
+        function sliderScroll(direction){
+            var marginRightNew;
+            var marginRightOld = sliderScrollUl.css('margin-right');
+            marginRightOld = parseFloat(marginRightOld);
+            if(direction == 'left'){
+                marginRightNew = marginRightOld-780;
+            }
+
+            if(direction == 'right'){
+                marginRightNew = marginRightOld +780;
+
+            }
+
+            if(marginRightNew < maxNegativeMargin){
+                marginRightNew =0;
+            }
+            if(marginRightNew > 0){
+                marginRightNew = maxNegativeMargin;
+            }
+            sliderScrollUl.animate({'marginRight': marginRightNew},3000);
+
+        }
+
+        $('.next').click(function(){
+            sliderScroll('left');
+        }); 
+
+        $('.prev').click(function(){
+            sliderScroll('right');
+        });
+
+        // End or SliderScroll
+
+
         /*  Start of main(first) Slider */
 
         var sliderTag = $('#slider');
@@ -840,7 +857,7 @@
         $('.flipTimer').flipTimer({
             direction:'down',
            //days : true,
-            date: 'February 17,2022 20:59:00',
+            date: 'February 19,2022 20:59:00',
             
             callback:function(){
                 $('.slider2_content_right').css('opacity', .4);
